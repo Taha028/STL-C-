@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int arr[] = {1,2,7,4,2,7,5,0,8};
+    int asize = sizeof(arr)/sizeof(arr[0]);
+    sort(begin(arr),end(arr));
+    for(int i = 0; i<asize; i++){
+        cout<<"Sorted Array "<<arr[i]<<endl;
+    }
+    if (binary_search(arr,arr+asize,10)){
+        cout<<"Element found";
+    }
+    else{
+        cout<<"Not found";
+    }
+}
